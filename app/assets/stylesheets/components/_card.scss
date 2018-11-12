@@ -1,11 +1,67 @@
 .card {
-  height: 175px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  height: auto;
   background-size: cover !important;
+  background-color: white;
   background-position: center;
-  color: white;
+  color: #484848;
   position: relative;
+  margin-right: 950px;
+  margin-bottom: 150px;
+  padding: 25px;
+  border-radius: 4px;
+  box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+  form {
+    input {
+      border-radius: 4px;
+      color: white;
+    }
+    p {
+      font-size: 20px;
+      margin: 5px;
+      text-align: left;
+      padding-left: 12px;
+    }
+  }
+  h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #484848;
+    margin-top: 0px;
+    text-align: left;
+  }
+  p {
+    font-size: 25px;
+    color: #484848;
+    margin-bottom: 15px;
+    text-align: left;
+
+  }
+  .button {
+    color: white;
+    background: #242038;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    padding: 6px 25px;
+    border-radius: 7px;
+    margin-top: 25px;
+    margin-left: 180px;
+    transition: background 0.3s ease;
+    font-family: Raleway;
+    border-style: none;
+  }
+  .button:hover {
+    color: #242038;
+    background: white;
+    transition: background 0.3s ease;
+  }
+  .search {
+    padding: 5px;
+    width: 90%;
+  }
 }
+
 .card-user {
   position: absolute;
   right: 10px;
