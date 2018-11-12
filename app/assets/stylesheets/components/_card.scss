@@ -1,0 +1,108 @@
+.card {
+  height: auto;
+  background-size: cover !important;
+  background-color: white;
+  background-position: center;
+  color: #484848;
+  position: relative;
+  margin-right: 950px;
+  margin-bottom: 150px;
+  padding: 25px;
+  border-radius: 4px;
+  box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+  form {
+    input {
+      border-radius: 4px;
+      color: white;
+    }
+    p {
+      font-size: 20px;
+      margin: 5px;
+      text-align: left;
+      padding-left: 12px;
+    }
+  }
+  h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #484848;
+    margin-top: 0px;
+    text-align: left;
+  }
+  p {
+    font-size: 25px;
+    color: #484848;
+    margin-bottom: 15px;
+    text-align: left;
+
+  }
+  .button {
+    color: white;
+    background: #242038;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    padding: 6px 25px;
+    border-radius: 7px;
+    margin-top: 25px;
+    margin-left: 180px;
+    transition: background 0.3s ease;
+    font-family: Raleway;
+    border-style: none;
+  }
+  .button:hover {
+    color: #242038;
+    background: white;
+    transition: background 0.3s ease;
+  }
+  .search {
+    padding: 5px;
+    width: 90%;
+  }
+}
+
+.card-user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  border-radius: 50%;
+}
+.card-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.card-description h2 {
+  font-size: 24px;
+}
+.card-description p {
+  font-size: 14px;
+  opacity: 0.7;
+  font-weight: lighter;
+}
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+.card-link:hover {
+  opacity: 0.1;
+}
+
+// .left-align {
+//   pull: left;
+// }

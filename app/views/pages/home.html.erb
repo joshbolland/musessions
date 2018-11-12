@@ -1,29 +1,47 @@
-<div class="navbar-wagon">
-  <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
-    <%= image_tag("logo") %>
-  </a>
+<div class="container">
+  <div class="navbar-wagon">
+    <!-- Logo -->
+    <a href="/" class="navbar-wagon-brand">
+      <%= image_tag("logo") %>
+    </a>
 
-  <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <!-- Right Navigation -->
+    <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Sign in</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Sign up</a>
-    <!-- <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a> -->
+      <a href="" class="navbar-wagon-item navbar-wagon-link">Sign in</a>
+      <a href="" class="navbar-wagon-item navbar-wagon-link">Sign up</a>
+      <!-- <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a> -->
+    </div>
   </div>
-</div>
-<h1>Musessions</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
 
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+  <div class="banner">
+    <div class="card">
+      <h1>Musessions</h1>
+        <p>Find musicians, find sessions.</p>
+        <form>
+          <p>Where</p>
+          <input class="search" type="text" name="location" placeholder="Location"><br>
+          <p>Date</p>
+          <input class="search" type="text" name="date" placeholder="dd-mm-yyyy"><br>
+          <p>Instruments</p>
+          <input class="search" type="text" name="instrument" placeholder="Guitar, drums..."><br>
+          <input class="button" type="submit">
+        </form>
+        </div>
+    </div>
   </div>
-  <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+
+  <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      Musessions is made with <i class="fas fa-headphones"></i> by the Jammer team
+    </div>
   </div>
 </div>
