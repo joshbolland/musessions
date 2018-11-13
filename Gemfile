@@ -16,6 +16,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
+# gem 'select2-rails', '~> 4.0', '>= 4.0.3'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
