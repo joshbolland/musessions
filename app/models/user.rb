@@ -4,5 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :booked_musicians, through: :bookings, source: :user
+  mount_uploader :photo, PhotoUploader
 end
 
