@@ -10,6 +10,11 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %>
   </head>
   <body>
+    <% if user_signed_in? %>
+    <%= render 'shared/navbar-logged-in' %>
+    <% else %>
+    <%= render 'shared/navbar-logged-out' %>
+    <% end %>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
