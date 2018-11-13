@@ -1,2 +1,14 @@
-<h1>Bookings#index</h1>
-<p>Find me in app/views/bookings/index.html.erb</p>
+<h1>All your bookings</h1>
+
+<% @bookings.each do |booking| %>
+<h3>(musician avatar) </h3>
+<p>Description: <%= booking.job_description %></p>
+<p>Location: <%= booking.location %></p>
+<p>Date: <%= booking.job_date %></p>
+<p>Status:  <%= booking.status.upcase %> </p>
+<br>
+<% end %>
+
+
+
+  <%= link_to 'Start a new search', root_path, class: "" %>
