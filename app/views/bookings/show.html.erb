@@ -6,7 +6,7 @@
 <br>
 <p>Status:  <%= @booking.status.upcase %> </p>
 
-<%= link_to 'Cancel this booking', bookings_path, method: :delete, data: { confirm: "Are you sure?" }, class: "" %></p>
+<%= link_to 'Cancel this booking', @booking, method: :delete, data: { confirm: "Are you sure?" }, class: "" %></p>
 
 
   <%= link_to 'Go back to your bookings', bookings_path, class: "" %>
