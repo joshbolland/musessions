@@ -1,0 +1,36 @@
+.form {
+  .button {
+    color: white;
+    background: #242038;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-align: center;
+    padding: 8px 25px;
+    border-radius: 4px;
+    margin-top: 25px;
+    margin-left: 230px;
+    transition: background 0.3s ease;
+    font-family: Raleway;
+    border-style: none;
+  }
+  .button:hover {
+    color: #242038;
+    background: white;
+    transition: background 0.3s ease;
+  }
+  .search {
+    padding: 5px;
+    width: 90%;
+  }
+  .input {
+    margin: 5px 40px 5px 0px;
+    border-radius: 4px;
+    width: 100%;
+    border: 1px solid rgb(215,215,215);
+  }
+  p {
+    margin: 0px;
+    text-align: left;
+    font-size: 18px;
+  }
+}
