@@ -3,6 +3,9 @@ class BookingsController < ApplicationController
   end
 
   def show
+    @booking = Booking.find(params[:id])
+    musician_id = @booking.booked_musician_id
+    @musician = User.find(musician_id)
   end
 
   def new
@@ -25,6 +28,12 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    respond_to do |format|
+      format.html { redirect_to bookings_path, notice: "Your booking was successfully cancelled." }
+      format.json { head :no_content }
+    end
   end
 
   private
