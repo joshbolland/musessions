@@ -1,2 +1,12 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+<h1>Booking info</h1>
+<p>Musician information: (musician avatar) <%= @musician.first_name %> <%= @musician.last_name %></p>
+<p>Description: <%= @booking.job_description %></p>
+<p>Location: <%= @booking.location %></p>
+<p>Date: <%= @booking.job_date %></p>
+<br>
+<p>Status:  <%= @booking.status.upcase %> </p>
+
+<%= link_to 'Cancel this booking', bookings_path, method: :delete, data: { confirm: "Are you sure?" }, class: "" %></p>
+
+
+  <%= link_to 'Go back to your bookings', bookings_path, class: "" %>
