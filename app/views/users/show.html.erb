@@ -34,18 +34,19 @@
  <% end %>
 <% end %>
 
-<% if @user == current_user %>
-  <%= link_to "Edit page", edit_user_registration_path %>
-<% end %>
+<div class="link_card">
+  <% if @user == current_user %>
+    <%= link_to "Edit page", edit_user_registration_path %>
+  <% end %>
+</div>
 
-
-<% if user_signed_in? && @user != current_user %>
-    <%= link_to "book", new_user_booking_path(@user) %>
-<% else %>
-    <%= link_to "book", new_user_registration_path %>
-<% end %>
-
-
+<div class="link_card">
+  <% if user_signed_in? && @user != current_user %>
+      <%= link_to "book", new_user_booking_path(@user) %>
+  <% else %>
+      <%= link_to "book", new_user_registration_path %>
+  <% end %>
+</div>
 
 
 <!-- button for bookings path -->
