@@ -5,9 +5,9 @@
   background-position: center;
   color: #484848;
   position: relative;
-  margin-right: 950px;
+  margin-right: 800px;
   margin-bottom: 150px;
-  padding: 25px;
+  padding: 20px;
   border-radius: 4px;
   box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
 
@@ -50,6 +50,10 @@
 }
 .card-link:hover {
   opacity: 0.1;
+}
+
+h1 {
+  margin: 5px;
 }
 }
 
