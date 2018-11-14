@@ -1,4 +1,53 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-<%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %>
-<p><%= @user.first_name %> <%= @user.last_name %></p>
+ <h1>Users#show</h1>
+ <p>Find me in app/views/users/show.html.erb</p>
+ <h2><%= @user.first_name %> <%= @user.last_name %></h2>
+
+<!-- <div class="container"> -->
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <div class="avatar">
+        <%if @user.photo.blank? %>
+          <p> <i class="fas fa-user"></i></p>
+        <% else %>
+          <%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %>
+        <% end %>
+        </div>
+        <div class="">
+        <p>Little something</p>
+    </div>
+  </div>
+</div>
+  <!-- </div> -->
+
+  <div class="card">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+      <p>bio</p>
+      </div>
+    </div>
+  </div>
+
+<% if @user == current_user %>
+ <%= simple_form_for(@user) do |f| %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+ <% end %>
+<% end %>
+
+<% if @user == current_user %>
+  <%= link_to "Edit page", edit_user_registration_path %>
+<% end %>
+
+
+<% if user_signed_in? && @user != current_user %>
+    <%= link_to "book", new_user_booking_path(@user) %>
+<% else %>
+    <%= link_to "book", new_user_registration_path %>
+<% end %>
+
+
+
+
+<!-- button for bookings path -->
+<!-- <%= submit_tag ("Search"), class: "button" %>
+
