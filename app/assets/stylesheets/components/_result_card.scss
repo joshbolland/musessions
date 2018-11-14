@@ -1,26 +1,24 @@
 .result-index {
-  height: 250px;
-  width: 700px;
+  height: 220px;
+  width: 600px;
   background-color: white;
   color: #484848;
   position: relative;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin: 20px;
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
 }
 .result-user-index {
   position: absolute;
-  left: 20px;
-  top: 20px;
-  width: 40px;
+  right: 20px;
+  top: 15px;
   border-radius: 50%;
 }
 
 .result-description-index {
   position: absolute;
-  bottom: 10px;
+  bottom: 40px;
   left: 20px;
 }
 
@@ -30,7 +28,7 @@
 }
 .result-link-index {
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
   right: 30px;
   font-size: 16px;
   border: 1px solid #484848;
