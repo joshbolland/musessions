@@ -1,22 +1,26 @@
 <h1>Search results:</h1>
 
   <% @users.each do |user| %>
-  <div class="result-index">
-    <div class="result-user-index">
-      <% if user.photo.blank? %>
-      <i class="fas fa-user-tie"></i>
-      <% else %>
-      <%= cl_image_tag user.photo, height: 150, width: 150, crop: :fill %>
-      <% end %>
-    </div>
-    <div class="result-description-index">
-      <p> Name: <%= user.first_name %> <%= user.last_name %> </p>
-      <p> Location: <%= user.location %> </p>
-    </div>
-    <div class="result-link-index">
-      <%= link_to 'Check profile', user %>
+  <div class="row">
+    <div class="result-index">
+      <div class="result-user-index">
+        <% if user.photo.blank? %>
+        <i class="fas fa-user-tie"></i>
+        <% else %>
+        <%= cl_image_tag user.photo, height: 120, width: 120, crop: :fill %>
+        <% end %>
       </div>
+      <div class="result-description-index">
+        <p> Name: <%= user.first_name %> <%= user.last_name %> </p>
+        <p> Location: <%= user.location %> </p>
+        <p> Instrument: Guitar </p>
+      </div>
+      <div class="result-link-index">
+        <%= link_to 'Check profile', user %>
+        </div>
+      </div>
+    </div>
   <% end %>
-</div>
-<br><br>
+
 <%= link_to 'Start a new search', root_path %>
+<br>
