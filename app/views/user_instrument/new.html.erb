@@ -1,2 +1,7 @@
-<h1>UserInstrument#new</h1>
+<h1>Hey! Tell us what you play!</h1>
 <p>Find me in app/views/user_instrument/new.html.erb</p>
+<%= form_tag user_instrument_index_path, class: "form", method: :post do %>
+  <p>Instrument</p>
+    <%= select_tag "instrument", options_from_collection_for_select(@instruments, "id", "name") %><br>
+    <%= submit_tag ("Done!"), class: "button" %>
+<% end %>
