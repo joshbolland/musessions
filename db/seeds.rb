@@ -11,13 +11,13 @@
 
 # puts "Seeding finished"
 
-Instrument.create(name: "guitar")
-Instrument.create(name: "drums")
-Instrument.create(name: "violin")
-Instrument.create(name: "bass")
-Instrument.create(name: "piano")
-Instrument.create(name: "cello")
-Instrument.create(name: "triangle")
-Instrument.create(name: "double-bass")
-Instrument.create(name: "oboe")
-Instrument.create(name: "singer")
+Instrument.create(name: "Guitar")
+Instrument.create(name: "Drums")
+Instrument.create(name: "Violin")
+Instrument.create(name: "Bass")
+Instrument.create(name: "Piano")
+Instrument.create(name: "Cello")
+Instrument.create(name: "Triangle")
+Instrument.create(name: "Double-bass")
+Instrument.create(name: "Oboe")
+Instrument.create(name: "Singer")
