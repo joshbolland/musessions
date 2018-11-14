@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'user_instrument/new'
-  get 'user_instrument/create'
   devise_for :users
   root to: 'pages#home'
   resources :users, only: [:index, :show] do
