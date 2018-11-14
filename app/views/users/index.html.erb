@@ -1,17 +1,22 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h1>Search results:</h1>
 
-<div class="footer">
-    <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
+  <% @users.each do |user| %>
+  <div class="result-index">
+    <div class="result-user-index">
+      <% if user.photo.blank? %>
+      <i class="fas fa-user-tie"></i>
+      <% else %>
+      <%= cl_image_tag user.photo, height: 150, width: 150, crop: :fill %>
+      <% end %>
     </div>
-    <div class="footer-copyright">
-      Musessions is made with <i class="fas fa-headphones"></i> by the Jammer team
+    <div class="result-description-index">
+      <p> Name: <%= user.first_name %> <%= user.last_name %> </p>
+      <p> Location: <%= user.location %> </p>
     </div>
-  </div>
+    <div class="result-link-index">
+      <%= link_to 'Check profile', user %>
+      </div>
+  <% end %>
 </div>
-
+<br><br>
+<%= link_to 'Start a new search', root_path %>

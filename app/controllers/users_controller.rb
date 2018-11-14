@@ -1,9 +1,6 @@
 class UsersController < ApplicationController
   def index
-    if params[:query].present?
-      @users = User.where()
-      @users = User.all
-    end
+    @users = User.where(is_musician: true )
   end
 
   def show
