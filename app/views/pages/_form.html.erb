@@ -1,13 +1,9 @@
 
 
 <%= form_tag users_path, class: "form", method: :get do %>
-
-
   <p>Instrument</p>
     <%= select_tag "instrument", options_from_collection_for_select(@instruments, "id", "name") %><br>
   <p>Where</p>
     <%= text_field_tag :location, params[:location], class: "input" %><br>
-  <!-- <p>Date</p> -->
-<!--     <%= text_field_tag :date, params[:date], class: "input" %><br> -->
     <%= submit_tag ("Search"), class: "button" %>
 <% end %>
