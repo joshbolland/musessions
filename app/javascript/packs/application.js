@@ -1,2 +1,2 @@
-// import "bootstrap";
-// import '../components/select2';
+import "bootstrap";
+import "../components/flatpickr"
