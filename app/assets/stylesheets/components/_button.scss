@@ -1,19 +1,20 @@
 .button {
-    color: white;
-    background: #242038;
+    color: #242038;
+    background: white;
     letter-spacing: 1px;
     display: inline-block;
     text-align: center;
-    padding: 8px 25px;
+    padding: 12px 24px;
     border-radius: 4px;
     margin-top: 25px;
     margin-left: 230px;
     transition: background 0.3s ease;
     font-family: Raleway;
     border-style: none;
+    font-weight: bold
   }
   .button:hover {
-    color: #242038;
-    background: white;
+    color: white;
+    background: #242038;
     transition: background 0.3s ease;
   }

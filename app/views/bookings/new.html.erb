@@ -1,8 +1,8 @@
 <div class="container">
     <div class="row">
-      <div class="col-sm-4 col-sm-offset-4">
+      <div class="col-xs-12 col-sm-4 col-sm-offset-4">
         <div class="booking-card">
-          <div class="form2">
+          <div class="deviseform">
             <p>Hey <%= @booker.first_name %>!<br><br> We'll send your booking request to:<br><strong><%= @musician.first_name %> <%= @musician.last_name %></strong></p>
             <p>They'll be back in touch shortly to let you know when they accept your booking.</p>
             <%= simple_form_for(@booking, as: :booking, method: :post, url: user_bookings_path(@musician)) do |f| %>
