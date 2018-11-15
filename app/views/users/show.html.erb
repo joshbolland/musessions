@@ -23,13 +23,27 @@
 </div>
 
 
-<% if @user == current_user %>
-  <%= link_to "Edit page", edit_user_registration_path %>
-<% end %><br><br>
+<!-- <% if @user == current_user %>
+ <%= simple_form_for(@user) do |f| %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+ <% end %>
+<% end %> -->
 
-<% if user_signed_in? && @user != current_user %>
-  <%= link_to "book", new_user_booking_path(@user) %>
-<% end %>
+<div class="link_card">
+  <% if @user == current_user %>
+    <%= link_to "Edit page", edit_user_registration_path %>
+  <% end %>
+</div>
+
+<div class="link_card">
+  <% if user_signed_in? && @user != current_user %>
+      <%= link_to "book", new_user_booking_path(@user) %>
+  <% else %>
+      <%= link_to "book", new_user_registration_path %>
+  <% end %>
+</div>
+
 
 
 
