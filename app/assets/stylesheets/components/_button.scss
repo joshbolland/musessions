@@ -18,3 +18,22 @@
     background: white;
     transition: background 0.3s ease;
 }
+.button {
+    color: white;
+    background: #242038;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-align: center;
+    padding: 8px 25px;
+    border-radius: 4px;
+    margin-top: 25px;
+    margin-left: 230px;
+    transition: background 0.3s ease;
+    font-family: Raleway;
+    border-style: none;
+  }
+  .button:hover {
+    color: #242038;
+    background: white;
+    transition: background 0.3s ease;
+  }

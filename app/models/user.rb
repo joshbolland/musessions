@@ -6,8 +6,10 @@ class User < ApplicationRecord
   has_many :booked_musicians, through: :bookings, source: :user
   has_many :user_instruments
   has_many :instruments, through: :user_instruments
-  
+
   mount_uploader :photo, PhotoUploader
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 
 end
 

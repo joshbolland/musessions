@@ -6,8 +6,9 @@
     <title>TODO</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
+    <%= stylesheet_pack_tag "map" %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%#= stylesheet_pack_tag 'application', media: 'all' %>
+    <%= stylesheet_pack_tag 'application', media: 'all' %>
   </head>
   <body>
     <% if user_signed_in? %>
@@ -16,9 +17,12 @@
     <%= render 'shared/navbar-logged-out' %>
     <% end %>
     <%= render 'shared/flashes' %>
-    <%= yield %>
+    <div style="min-height: calc(100vh - 130px)">
+      <%= yield %>
+    </div>
     <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+    <%= javascript_pack_tag "map" %>
   </body>
 </html>

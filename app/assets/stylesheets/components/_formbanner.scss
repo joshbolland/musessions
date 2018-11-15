@@ -1,0 +1,10 @@
+.formbanner {
+  color: white;
+  text-align: center;
+  height: calc(100vh - 70px);
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: image-url("background.jpeg");
+}

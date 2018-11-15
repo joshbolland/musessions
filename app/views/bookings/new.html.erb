@@ -1,24 +1,32 @@
-<h1>Bookings#new</h1>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-4">
+        <div class="booking-card">
+          <div class="form2">
+            <p>Hey <%= @booker.first_name %>!<br><br> We'll send your booking request to:<br><strong><%= @musician.first_name %> <%= @musician.last_name %></strong></p>
+            <p>They'll be back in touch shortly to let you know when they accept your booking.</p>
+            <%= simple_form_for(@booking, as: :booking, method: :post, url: user_bookings_path(@musician)) do |f| %>
+            <%= f.error_notification %>
+            <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-<p>Musician: <%= @musician.first_name %> <%= @musician.last_name %> </p>
-<p>Booker: <%= @booker.first_name %> <%= @booker.last_name %> </p>
-<%= simple_form_for(@booking, as: :booking, method: :post, url: user_bookings_path(@musician)) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+            <div class="form-inputs">
+              <%= f.input :job_description %>
+            </div>
 
-  <div class="form-inputs">
-    <%= f.input :job_description %>
-  </div>
+            <div class="form-inputs">
+              <%= f.input :location %>
+            </div>
 
-  <div class="form-inputs">
-    <%= f.input :location %>
-  </div>
+            <div class="form-inputs">
+              <%= f.input :job_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+            </div>
 
-  <div class="form-inputs">
-    <%= f.input :job_date %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+            <div class="form-actions">
+              <%= f.submit "Book Now", class: "button" %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
