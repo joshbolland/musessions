@@ -1,6 +1,13 @@
 class UsersController < ApplicationController
   def index
-    @users = User.where(is_musician: true )
+    @users = User.where.not(latitude: nil, longitude: nil)
+
+    @markers = @users.map do |user|
+      {
+        lng: user.longitude,
+        lat: user.latitude
+      }
+    end
   end
 
   def show
