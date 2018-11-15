@@ -17,6 +17,10 @@
     <%= f.input :last_name,
                 required: false,
                 input_html: { autocomplete: "last_name" }%>
+    <%= f.input :bio,
+                label: "Tell us a bit about yourself. Don't be shy!",
+                required: false,
+                input_html: { autocomplete: "bio" }%>
     <%= f.input :is_musician, as: :radio_buttons,
                 label: "Are you a musician?",
                 required: false,
