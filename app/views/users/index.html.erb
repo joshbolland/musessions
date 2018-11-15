@@ -13,7 +13,9 @@
       <div class="result-description-index">
         <p> Name: <%= user.first_name %> <%= user.last_name %> </p>
         <p> Location: <%= user.location %> </p>
-        <p> Instrument: Guitar </p>
+        <p> Instrument: <% user.instruments.each do |instrument| %> </p>
+        <p> - <%= instrument.name %> </p>
+        <% end %>
       </div>
       <div class="result-link-index">
         <%= link_to 'Check profile', user %>
