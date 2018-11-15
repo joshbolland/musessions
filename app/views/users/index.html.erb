@@ -22,5 +22,12 @@
     </div>
   <% end %>
 
+<div
+  id="map"
+  style="width: 50%;
+  height: 500px;"
+  data-markers="<%= @markers.to_json %>"
+></div>
+
 <%= link_to 'Start a new search', root_path %>
 <br>
