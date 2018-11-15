@@ -3,19 +3,29 @@
   background-color: white;
   background-position: center;
   color: #484848;
-  position: relative;
-  margin-left: 40px;
-  margin-right: 1000px;
-  margin-bottom: 100px;
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
   width: 400px;
-  height: 400px
+  height: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 72px auto;
 }
+
+.small-margin-top {
+  margin-top: 8px;
+}
+
+.paragraph-flex {
+  text-align: center;
+}
+
 
 .h1 {
   margin-left: 40px;
+  margin-bottom: -38.5px;
  }
 
 .bio_card {
@@ -25,11 +35,20 @@
   background-position: center;
   color: #484848;
   position: relative;
-  margin: 40px;
-  padding: 20px;
+  margin-top: 72px;
+  padding: 24px 40px;
   border-radius: 4px;
   box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
-  height: 400px
+  height: 600px;
+
+p {
+  text-align: center;
+  margin-top: 70px;
+  }
+h2 {
+  text-align: center;
+  font-size: 26px;
+}
 }
 // .result-index {
 //   height: 220px;

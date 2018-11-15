@@ -1,51 +1,41 @@
 
-  <h1 class="h1"><%= @user.first_name %> <%= @user.last_name %></h1>
 <div class="container">
+<h1 class="h1"><%= @user.first_name %> <%= @user.last_name %></h1>
   <div class="row">
     <div class="col-xs-12 col-sm-6">
-      <div class="avatar">
+      <div class="profile_card">
+        <div class="avatar">
           <%if @user.photo.blank? %>
-            <p> <i class="fas fa-user"></i></p>
+            <p><i class="fas fa-user"></i></p>
           <% else %>
             <%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %>
           <% end %>
-      </div>
-      <div class="profile_card">
-          <p>Little something</p>
+        </div>
+        <div class="paragraph-flex">
+          <p class="small-margin-top"><%= @user.location %></p>
+          <p>£<%= @user.rate %></p>
+        </div>
+        <div class="profile-edit-button">
+          <% if @user == current_user %>
+            <div>
+              <%= button_to "Edit", edit_user_registration_path, method: "get", class: "button-user"%>
+            </div>
+            <div>
+
+            </div>
+          <% elsif user_signed_in? && @user != current_user %>
+            <%= button_to "Book", new_user_booking_path(@user), :method => "get", class: "button-user" %>
+          <% end %>
+        </div>
       </div>
     </div>
     <div class="col-xs-12 col-sm-6">
       <div class="bio_card">
-      <p>Gather round kids, lemme tell you bout ma fine lil self. Shout out to Phay Phay.</p>
+        <h2>Some stuff you might want to know...</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
       </div>
     </div>
   </div>
-</div>
-
-
-<!-- <% if @user == current_user %>
- <%= simple_form_for(@user) do |f| %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
- <% end %>
-<% end %> -->
-
-<div class="link_card">
-  <% if @user == current_user %>
-    <%= link_to "Edit page", edit_user_registration_path %>
-  <% end %>
-</div>
-
-<div class="link_card">
-  <% if user_signed_in? && @user != current_user %>
-      <%= link_to "book", new_user_booking_path(@user) %>
-  <% else %>
-      <%= link_to "book", new_user_registration_path %>
-  <% end %>
-</div>
-
-
-
-
-
-
+  <div>
+  </div>
+  </div>
