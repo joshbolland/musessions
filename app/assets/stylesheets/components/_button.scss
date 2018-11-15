@@ -1,0 +1,20 @@
+.button-user {
+  color: white;
+    background-color: #242038;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    // margin-top: 25px;
+    // margin-left: 230px;
+    transition: background 0.3s ease;
+    font-family: Raleway;
+    border-style: none;
+    // margin-left:
+}
+
+.button-user:hover {
+    color: #242038;
+    background: white;
+    transition: background 0.3s ease;
+}

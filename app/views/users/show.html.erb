@@ -20,16 +20,17 @@
       </div>
     </div>
   </div>
+
+
+  <% if @user == current_user %>
+  <%= button_to "Edit Page", edit_user_registration_path, :method => "get", class: "button-user" %>
+  <% end %><br><br>
+
+  <% if user_signed_in? && @user != current_user %>
+  <%= button_to "Book", new_user_booking_path(@user), :method => "get" %>
+  <% end %>
 </div>
 
-
-<% if @user == current_user %>
-  <%= link_to "Edit page", edit_user_registration_path %>
-<% end %><br><br>
-
-<% if user_signed_in? && @user != current_user %>
-  <%= link_to "book", new_user_booking_path(@user) %>
-<% end %>
 
 
 
