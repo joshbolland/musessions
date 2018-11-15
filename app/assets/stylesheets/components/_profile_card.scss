@@ -1,62 +1,78 @@
 .profile_card {
-  height: auto;
   background-size: cover !important;
   background-color: white;
   background-position: center;
   color: #484848;
   position: relative;
-  margin-right: 800px;
-  margin-bottom: 150px;
+  margin-left: 40px;
+  margin-right: 1000px;
+  margin-bottom: 100px;
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+  width: 400px;
+  height: 400px
+}
 
-// .card-user {
+.h1 {
+  margin-left: 40px;
+ }
+
+.bio_card {
+  width: 80%;
+  background-size: cover !important;
+  background-color: white;
+  background-position: center;
+  color: #484848;
+  position: relative;
+  margin: 40px;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+  height: 400px
+}
+// .result-index {
+//   height: 220px;
+//   width: 600px;
+//   background-color: white;
+//   color: #484848;
+//   position: relative;
+//   margin: 20px;
+//   padding: 20px;
+//   border-radius: 4px;
+//   box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+// }
+// .result-user-index {
 //   position: absolute;
-//   right: 10px;
-//   top: 10px;
-//   width: 40px;
+//   right: 20px;
+//   top: 15px;
 //   border-radius: 50%;
 // }
-// .card-category {
+
+// .result-description-index {
 //   position: absolute;
-//   top: 10px;
-//   left: 10px;
-//   font-size: 15px;
-//   text-transform: uppercase;
-// }
-// .card-description {
-//   position: absolute;
-//   bottom: 10px;
-//   left: 10px;
-// }
-// .card-description h2 {
-//   font-size: 24px;
-// }
-// .card-description p {
-//   font-size: 14px;
-//   opacity: 0.7;
-//   font-weight: lighter;
-// }
-// .card-link {
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   right: 0;
-//   width: 100%;
-//   z-index: 2;
-//   background: black;
-//   opacity: 0;
-// }
-// .card-link:hover {
-//   opacity: 0.1;
+//   bottom: 40px;
+//   left: 20px;
 // }
 
-// h1 {
-//   margin: 5px;
+// .result-description-index p {
+//   font-size: 20px;
+//   opacity: 0.9;
 // }
+// .result-link-index {
+//   position: absolute;
+//   bottom: 20px;
+//   right: 30px;
+//   font-size: 16px;
+//   border: 1px solid #484848;
+//   padding: 10px;
+//   border-radius: 20px;
+// }
+// .result-link-index a {
+//   color: #484848;
 // }
 
-// // .left-align {
-// //   pull: left;
-// // }
+// .result-link-index a:hover {
+//   opacity: 0.9;
+//   text-decoration: none;
+// }
