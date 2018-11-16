@@ -1,41 +1,45 @@
 
-<div class="container">
-<h1 class="h1"><%= @user.first_name %> <%= @user.last_name %></h1>
-  <div class="row">
-    <div class="col-xs-12 col-sm-6">
-      <div class="profile_card">
-        <div class="avatar">
-          <%if @user.photo.blank? %>
-            <p><i class="fas fa-user"></i></p>
-          <% else %>
-            <%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %>
-          <% end %>
-        </div>
-        <div class="paragraph-flex">
-          <p class="small-margin-top"><%= @user.location %></p>
-          <p>£<%= @user.rate %></p>
-        </div>
-        <div class="profile-edit-button">
-          <% if @user == current_user %>
-            <div>
-              <%= button_to "Edit", edit_user_registration_path, method: "get", class: "button-user"%>
+<div class="user-banner">
+  <div class="container showpage">
+    <h1 class="h1"><%= @user.first_name %> <%= @user.last_name %></h1>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="profile_card">
+            <div class="avatar">
+              <%if @user.photo.blank? %>
+                <%= image_tag "logo.png", class: "logo" %>
+              <% else %>
+                <%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %>
+              <% end %>
             </div>
-            <div>
 
+            <div class="paragraph-flex">
+
+                <h3>Location: <%= @user.location %></h3>
+                <h3>Rate: £<%= @user.rate %></h3>
+              </div>
+              <div class="profile-edit-button">
+                <% if @user == current_user %>
+                  <div>
+                  <%= button_to "Edit", edit_user_registration_path, method: "get", class: "button-user"%>
+                </div>
+
+                <div>
+                </div>
+              <% elsif user_signed_in? && @user != current_user %>
+                <%= button_to "Book", new_user_booking_path(@user), :method => "get", class: "button-user" %>
+              <% end %>
             </div>
-          <% elsif user_signed_in? && @user != current_user %>
-            <%= button_to "Book", new_user_booking_path(@user), :method => "get", class: "button-user" %>
-          <% end %>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="bio_card">
+            <h2>Some stuff you might want to know...</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-xs-12 col-sm-6">
-      <div class="bio_card">
-        <h2>Some stuff you might want to know...</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      </div>
-    </div>
+    <div>
   </div>
-  <div>
   </div>
   </div>

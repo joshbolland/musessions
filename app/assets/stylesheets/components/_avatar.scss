@@ -7,13 +7,14 @@
   padding: 16px;
   border: white 1px solid;
   padding: 42px;
-  display: flex;
   text-align: center;
   margin-left: 180px;
-  margin-top: 24px;
   margin-right: 50%;
   p {
-    text-align: right;
+    text-align: center;
+  }
+  .logo {
+    height: 75px;
   }
 }
 // .avatar-large {
