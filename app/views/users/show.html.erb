@@ -11,6 +11,9 @@
               <%= cl_image_tag @user.photo, class: "avatar-bordered avatar-large" %>
             <% end %>
             <h3>Location: <%= @user.location %></h3>
+            <p> | <% @user.instruments.each do |instrument| %>
+                    <%= instrument.name %> |
+                  <% end %> </p>
             <h3>Day rate: £<%= @user.rate %></h3>
             <% if @user == current_user %>
               <%= button_to "Edit", edit_user_registration_path, method: "get", class: "button-user"%>
@@ -25,7 +28,7 @@
       <div class="col-xs-12 col-sm-6">
         <div class="bio_card">
           <h2>Some stuff you might want to know...</h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <p><%= @user.bio %></p>
         </div>
       </div>
     </div>
