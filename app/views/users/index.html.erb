@@ -1,35 +1,50 @@
-<h1>Search results:</h1>
-
-  <% @users.each do |user| %>
-  <div class="row">
-    <div class="result-index">
-      <div class="result-user-index">
-        <% if user.photo.blank? %>
-        <i class="fas fa-user-tie"></i>
-        <% else %>
-        <%= cl_image_tag user.photo, height: 120, width: 120, crop: :fill %>
-        <% end %>
+<div class="content">
+  <div class="cards-container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div class="title">
+          <% if @users.count == 1 && @location.present? %>
+            <h3> <%= @users.count %> musician available in <%= @location %>: </h3>
+          <% elsif @users.count == 1 && @location.blank? %>
+            <h3> <%= @users.count %> musician available: </h3>
+          <% elsif @users.count != 1 && @location.present? %>
+            <h3> <%= @users.count %> musicians available in <%= @location %>: </h3>
+          <% elsif @users.count != 1 && @location.blank? %>
+            <h3> <%= @users.count %> musicians available: </h3>
+          <% end %>
+        </div>
       </div>
-      <div class="result-description-index">
-        <p> Name: <%= user.first_name %> <%= user.last_name %> </p>
-        <p> Location: <%= user.location %> </p>
-        <p> Instrument: <% user.instruments.each do |instrument| %> </p>
-        <p> - <%= instrument.name %> </p>
-        <% end %>
-      </div>
-      <div class="result-link-index">
-        <%= link_to 'Check profile', user %>
+      <% @users.each do |user| %>
+        <div class="col-xs-12 col-md-12">
+          <div class="result-card">
+            <div class="result-avatar-card">
+              <% if user.photo.blank? %>
+                <%= cl_image_tag("lbf9irqu7pjyp0zaow8h",
+                  width: 180, height: 180, crop: :fill) %>
+              <% else %>
+                <%= cl_image_tag user.photo, height: 180, width: 180, crop: :fill, class: "result-avatar"%>
+              <% end %>
+            </div>
+            <div class="result-description-card">
+              <h3> <%= user.first_name %> <%= user.last_name %> | <i class="fas fa-map-marker-alt"></i></i> <%= user.location %> </h3>
+              <p> | <% user.instruments.each do |instrument| %>
+                <%= instrument.name %> |
+              <% end %> </p>
+              <p> Book from: <em> £<%= user.rate %> </em></p>
+            </div>
+            <%= link_to 'Check profile', user, class: "result-button" %>
+          </div>
+        </div>
+      <% end %>
+      <div class="col-xs-12 col-md-12">
+        <div class="new-search">
+          <%= link_to 'Start a new search', root_path, class: "new-search-button" %>
         </div>
       </div>
     </div>
-  <% end %>
-
-<div
-  id="map"
-  style="width: 50%;
-  height: 500px;"
-  data-markers="<%= @markers.to_json %>"
-></div>
-
-<%= link_to 'Start a new search', root_path %>
-<br>
+  </div>
+  <div
+    id="map"
+    data-markers="<%= @markers.to_json %>"
+  ></div>
+</div>
