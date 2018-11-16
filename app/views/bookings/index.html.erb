@@ -1,14 +1,24 @@
-<h1>All your bookings</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <center><h1>All your bookings</h1></center>
+    </div>
+  </div>
 
-<% @bookings.each do |booking| %>
-<h3>(musician avatar) </h3>
-<p>Description: <%= booking.job_description %></p>
-<p>Location: <%= booking.location %></p>
-<p>Date: <%= booking.job_date %></p>
-<p>Status:  <%= booking.status.upcase %> </p>
-<br>
-<% end %>
-
-
-
-  <%= link_to 'Start a new search', root_path, class: "" %>
+      <% @bookings.each do |booking| %>
+      <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+        <center><div class="result-card">
+          <div class="result-avatar-card">
+            <p>Description: <%= booking.job_description %></p>
+            <p>Location: <%= booking.location %></p>
+            <p>Date: <%= booking.job_date %></p>
+            <p>Status:  <%= booking.status.upcase %> </p>
+            <br>
+          </div>
+        </div>
+        </center>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
