@@ -12,6 +12,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     musician_id = @booking.booked_musician_id
     @musician = User.find(musician_id)
+    @user = User.find(params[:id])
   end
 
   def new

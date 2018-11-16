@@ -15,23 +15,21 @@
             </div>
             <div class="profile-edit-button">
               <% if @user == current_user %>
-              <div>
                 <%= button_to "Edit", edit_user_registration_path, method: "get", class: "button-user"%>
-              </div>
-
-              <div>
-              </div>
               <% elsif user_signed_in? && @user != current_user %>
-              <%= button_to "Book", new_user_booking_path(@user), :method => "get", class: "button-user" %>
+                <%= button_to "Book", new_user_booking_path(@user), :method => "get", class: "button-user" %>
+              <% elsif user_signed_in? == false %>
+                <%= button_to "Book", new_user_registration_path, :method => "get", class: "button-user" %>
               <% end %>
-            </div>
-          </div>
-        </div>
+              <%= button_to "Back to search", users_path, :method => "get", class: "button-index" %>
+             </div>
+
         <div class="col-xs-12 col-sm-6">
           <div class="bio_card">
             <h2>Some stuff you might want to know...</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           </div>
+
         </div>
       </div>
       <div>
