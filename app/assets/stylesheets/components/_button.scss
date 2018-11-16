@@ -70,18 +70,30 @@
     border-radius: 5px;
     transition: background 0.3s ease;
     font-family: Raleway;
-    font-size: 16px;
     border-style: none;
     font-size: 14px;
     margin: 6px;
     height:auto;
+    font-weight: bold;
+    padding: 10px;
+    #button-text-delete {
+      color: white;
+      margin-bottom: 0px;
+      text-decoration: none !important;
+    }
    }
 
   .button-delete:hover {
     color: #931113;
     background: white;
     transition: background 0.3s ease;
-    text-decoration: none;
+    text-decoration: none !important;
+    #button-text-delete {
+      color: #931113;
+      background: white;
+      transition: background 0.3s ease;
+      text-decoration: none !important;
+    }
    }
 
   .flex {
@@ -101,15 +113,28 @@
     border-style: none;
     margin: 5px;
     height: auto;
-    width: 200px;
-    font-size: 16px;
+    width: auto;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    #button-text-back {
+      color: white;
+      margin-bottom: 0px;
+      text-decoration: none;
+    }
   }
 
   .button-back:hover {
     color: #242038;
     background: white;
-  transition: background 0.3s ease;
-  text-decoration: none;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    #button-text-back {
+      color: #242038;
+      background: white;
+      transition: background 0.3s ease;
+      text-decoration: none !important;
+    }
   }
 
 .button-icon {
