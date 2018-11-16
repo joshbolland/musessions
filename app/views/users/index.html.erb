@@ -1,3 +1,16 @@
+<div class="search-bar">
+  <%= form_tag users_path, method: :get, :class => "form-group row" do %>
+    <div class="col-sm-2">
+      <%= select_tag "instrument", options_from_collection_for_select(@instruments, "id", "name"), class: "form-control instrument" %>
+    </div>
+    <div class="col-sm-4">
+      <%= text_field_tag :location, params[:location], placeholder: 'Where', class: "input form-control", id: "musician_location" %>
+    </div>
+    <div class="col-sm-2">
+      <%= submit_tag ("Search"), class: "new-search-button form-control" %>
+    </div>
+  <% end %>
+</div>
 <div class="content">
   <div class="cards-container">
     <div class="row">
@@ -38,7 +51,6 @@
       <% end %>
       <div class="col-xs-12 col-md-12">
         <div class="new-search">
-          <%= link_to 'Start a new search', root_path, class: "new-search-button" %>
         </div>
       </div>
     </div>

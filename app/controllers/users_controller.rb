@@ -17,6 +17,10 @@ class UsersController < ApplicationController
         lat: user.latitude
       }
     end
+
+    @search = {}
+    @instruments = Instrument.all
+
   end
 
   def show
