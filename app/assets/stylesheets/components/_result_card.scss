@@ -52,22 +52,22 @@
 }
 .content {
   display: flex;
-  align-items: center;
   padding: 20px;
-  justify-content: space-between;
+
 }
 .cards-container {
   display: flex;
-  align-items: center;
 }
 #map {
-  flex: 0 0 550px;
-  height: 650px;
+  flex: 1 0 50%;
+  height: 550px;
   position: sticky !important;
+  top: 40px;
+  margin-right: 30px;
+  margin-top: 40px;
   border: 15px solid white;
-  top: 10px;
-  right: 20px;
-  margin-top: 10px;
+
+
 }
 .title {
   margin-left: 25px;
