@@ -9,31 +9,27 @@
          <% else %>
          <center><%= cl_image_tag @user.photo, class: "avatar-bordered-small" %></center>
          <% end %>
-        <div></div>
+         <div></div>
          <p><strong>Musician information</strong><br> <%= @musician.first_name %> <%= @musician.last_name %></p>
          <p><strong>Description</strong><br> <%= @booking.job_description %></p>
          <p><strong>Location</strong><br><%= @booking.location %></p>
          <p><strong>Date</strong><br> <%= @booking.job_date %></p>
          <p><strong>Status</strong><br><p><%= @booking.status.upcase %></p>
-       </div>
-     </div>
-   </div>
-
-  <div class="flexbox">
-    <%= link_to @booking, method: :delete, data: { confirm: "Are you sure?" }, class: ""  do %>
-      <div class="button-delete flex">
-        <i class="far fa-trash-alt button-icon"></i>
-        <p id="button-text">Delete</p>
-        <i class="far fa-trash-alt" style="color: #931113"></i>
+         <div class="flexbox">
+          <%= link_to @booking, method: :delete, data: { confirm: "Are you sure?" }, class: ""  do %>
+          <div class="button-delete flex">
+            <i class="far fa-trash-alt button-icon"></i>
+            <p id="button-text-delete">Delete</p>
+          </div>
+          <% end %>
+          <%= link_to bookings_path, class: "" do %>
+          <div class="button-back flex">
+            <i class="fas fa-undo button-icon"></i>
+            <p id="button-text-back">Back to Bookings</p>
+          </div>
+          <% end %>
+        </div>
       </div>
-    <% end %>
-   <%= link_to bookings_path, class: "" do %>
-     <div class="button-back flex">
-      <i class="fas fa-undo button-icon"></i>
-      <p id="button-text">Back to bookings</p>
-      <i class="fas fa-undo" style="color: #241F38"></i>
     </div>
-  <% end %>
-
   </div>
 </div>
