@@ -9,7 +9,7 @@
               <%if @user.photo.blank? %>
                 <%= image_tag "logo.png", class: "logo" %>
               <% else %>
-                <%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %>
+                <%= cl_image_tag @user.photo, class: "avatar" %>
               <% end %>
             </div>
 
@@ -23,7 +23,9 @@
                   <div>
                   <%= button_to "Edit", edit_user_registration_path, method: "get", class: "button-user"%>
                 </div>
-
+                <div>
+                  <%= button_to "Back to search", users_path, :method => "get", class: "button-index" %>
+                 </div>
                 <div>
                 </div>
               <% elsif user_signed_in? && @user != current_user %>
@@ -37,6 +39,7 @@
             <h2>Some stuff you might want to know...</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           </div>
+
         </div>
       </div>
     <div>

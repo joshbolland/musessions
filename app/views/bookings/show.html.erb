@@ -1,12 +1,39 @@
-<h1>Booking info</h1>
-<p>Musician information: (musician avatar) <%= @musician.first_name %> <%= @musician.last_name %></p>
-<p>Description: <%= @booking.job_description %></p>
-<p>Location: <%= @booking.location %></p>
-<p>Date: <%= @booking.job_date %></p>
-<br>
-<p>Status:  <%= @booking.status.upcase %> </p>
+ <div class="banner">
+  <div class="container bookings">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <div class="booking-info">
+         <h1>Booking Info</h1>
+         <%if @user.photo.blank? %>
+         <%= image_tag "logo.png", class: "logo" %>
+         <% else %>
+         <center><%= cl_image_tag @user.photo, class: "avatar-bordered-small" %></center>
+         <% end %>
+        <div></div>
+         <p><strong>Musician information</strong><br> <%= @musician.first_name %> <%= @musician.last_name %></p>
+         <p><strong>Description</strong><br> <%= @booking.job_description %></p>
+         <p><strong>Location</strong><br><%= @booking.location %></p>
+         <p><strong>Date</strong><br> <%= @booking.job_date %></p>
+         <p><strong>Status</strong><br><p><%= @booking.status.upcase %></p>
+       </div>
+     </div>
+   </div>
 
-<%= link_to 'Cancel this booking', @booking, method: :delete, data: { confirm: "Are you sure?" }, class: "" %></p>
+  <div class="flexbox">
+    <%= link_to @booking, method: :delete, data: { confirm: "Are you sure?" }, class: ""  do %>
+      <div class="button-delete flex">
+        <i class="far fa-trash-alt button-icon"></i>
+        <p id="button-text">Delete</p>
+        <i class="far fa-trash-alt" style="color: #931113"></i>
+      </div>
+    <% end %>
+   <%= link_to bookings_path, class: "" do %>
+     <div class="button-back flex">
+      <i class="fas fa-undo button-icon"></i>
+      <p id="button-text">Back to bookings</p>
+      <i class="fas fa-undo" style="color: #241F38"></i>
+    </div>
+  <% end %>
 
-
-  <%= link_to 'Go back to your bookings', bookings_path, class: "" %>
+  </div>
+</div>
