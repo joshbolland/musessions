@@ -1,39 +1,29 @@
-
 <div class="user-banner">
   <div class="container showpage">
-    <h1 class="h1"><%= @user.first_name %> <%= @user.last_name %></h1>
-      <div class="row">
-        <div class="col-xs-12 col-sm-6">
-          <div class="profile_card">
-            <div class="avatar">
-              <%if @user.photo.blank? %>
-                <%= image_tag "logo.png", class: "logo" %>
-              <% else %>
-                <%= cl_image_tag @user.photo, class: "avatar" %>
-              <% end %>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <div class="profile_card">
+          <div class="paragraph-flex">
+            <h1><%= @user.first_name %> <%= @user.last_name %><h1>
+                <%if @user.photo.blank? %>
+                  <%= image_tag "logo.png" %>
+                <% else %>
+                  <%= cl_image_tag @user.photo, class: "avatar-bordered avatar-large" %>
+                <% end %>
+              <h3>Location: <%= @user.location %></h3>
+              <h3>Rate: £<%= @user.rate %></h3>
             </div>
-
-            <div class="paragraph-flex">
-
-                <h3>Location: <%= @user.location %></h3>
-                <h3>Rate: £<%= @user.rate %></h3>
-              </div>
-              <div class="profile-edit-button">
-                <% if @user == current_user %>
-                  <div>
-                  <%= button_to "Edit", edit_user_registration_path, method: "get", class: "button-user"%>
-                </div>
-                <div>
-                  <%= button_to "Back to search", users_path, :method => "get", class: "button-index" %>
-                 </div>
-                <div>
-                </div>
+            <div class="profile-edit-button">
+              <% if @user == current_user %>
+                <%= button_to "Edit", edit_user_registration_path, method: "get", class: "button-user"%>
               <% elsif user_signed_in? && @user != current_user %>
                 <%= button_to "Book", new_user_booking_path(@user), :method => "get", class: "button-user" %>
+              <% elsif user_signed_in? == false %>
+                <%= button_to "Book", new_user_registration_path, :method => "get", class: "button-user" %>
               <% end %>
-            </div>
-          </div>
-        </div>
+              <%= button_to "Back to search", users_path, :method => "get", class: "button-index" %>
+             </div>
+
         <div class="col-xs-12 col-sm-6">
           <div class="bio_card">
             <h2>Some stuff you might want to know...</h2>
@@ -42,7 +32,7 @@
 
         </div>
       </div>
-    <div>
-  </div>
-  </div>
+      <div>
+      </div>
+    </div>
   </div>

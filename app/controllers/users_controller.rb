@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def index
+    @location = params[:location]
     if params[:location].present?
       instru = Instrument.find(params[:instrument])
       @users = User.where.not(latitude: nil, longitude: nil).near(params[:location], 10).select { |user| user.instruments.include?(instru) }
@@ -16,6 +17,10 @@ class UsersController < ApplicationController
         lat: user.latitude
       }
     end
+
+    @search = {}
+    @instruments = Instrument.all
+
   end
 
   def show

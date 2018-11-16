@@ -1,5 +1,5 @@
-.result-index {
-  height: 220px;
+.result-card {
+  height: 225px;
   width: 600px;
   background-color: white;
   color: #484848;
@@ -9,37 +9,96 @@
   border-radius: 4px;
   box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
 }
-.result-user-index {
+.result-avatar-card {
   position: absolute;
-  right: 20px;
-  top: 15px;
-  border-radius: 50%;
+  left: 30px;
+  top: 20px;
 }
-
-.result-description-index {
+.result-avatar {
+  box-shadow: 1px 1px 1px 1px rgba(36, 32, 56, 0.1);
+  border-radius: 2px;
+}
+.result-description-card {
   position: absolute;
-  bottom: 40px;
-  left: 20px;
-}
-
-.result-description-index p {
-  font-size: 20px;
+  top: 10px;
+  left: 240px;
+  font-size: 16px;
   opacity: 0.9;
 }
-.result-link-index {
+.result-description-card h3 {
+  font-size: 20px;
+}
+.result-button {
   position: absolute;
   bottom: 20px;
   right: 30px;
-  font-size: 16px;
-  border: 1px solid #484848;
-  padding: 10px;
-  border-radius: 20px;
+  color: white;
+  background: #242038;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-align: center;
+  padding: 12px 24px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  font-family: Raleway;
+  border-style: none;
+  font-weight: bold;
 }
-.result-link-index a {
-  color: #484848;
-}
-
-.result-link-index a:hover {
-  opacity: 0.9;
+.result-button:hover {
+  color: #242038;
+  background: white;
+  transition: background 0.3s ease;
   text-decoration: none;
+}
+.content {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.cards-container {
+  display: flex;
+}
+#map {
+  flex: 1 0 50%;
+  height: 550px;
+  position: sticky !important;
+  top: 40px;
+  margin-right: 30px;
+  margin-top: 40px;
+  border: 15px solid white;
+}
+.title {
+  margin-left: 25px;
+}
+.new-search {
+  text-align: center;
+  margin: 20px;
+}
+.new-search-button {
+  color: #242038;
+  background: white;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 8px 34px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  font-family: Raleway;
+  box-shadow: 0 1px 1px rgba(36, 32, 56, 0.5);
+  font-weight: bold;
+}
+.new-search-button:hover {
+  color: white;
+  background: #242038;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+.fa-map-marker-alt {
+  font-size: 14px;
+}
+.search-bar {
+  margin-left: 280px;
+  margin-top: 15px;
+  width: 1400px;
+  text-align: center;
 }
