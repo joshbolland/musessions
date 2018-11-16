@@ -1,23 +1,45 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-      <center><h1>All your bookings</h1></center>
-    </div>
-  </div>
+<div class="bookings-container">
+  <h1 style="text-align: center;">All your bookings</h1>
+<div class="row">
 
       <% @bookings.each do |booking| %>
-      <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-        <center><div class="result-card">
-          <div class="result-avatar-card">
-            <p>Description: <%= booking.job_description %></p>
-            <p>Location: <%= booking.location %></p>
-            <p>Date: <%= booking.job_date %></p>
-            <p>Status:  <%= booking.status.upcase %> </p>
-            <br>
-          </div>
+        <div class="col-xs-12 col-sm-4 col-sm-offset-3">
+          <div class="bookings-card">
+              <div class="booked-musician-avatar">
+                <% if booking.user.photo.blank? %>
+                  <%= cl_image_tag("lbf9irqu7pjyp0zaow8h",
+                    width: 120, height: 120, crop: :fill) %>
+                <% else %>
+                  <% musician = User.find(booking.booked_musician_id) %>
+                  <%= cl_image_tag musician.photo, width: 120, height: 120, crop: :fill, class: "booked-avatar"%>
+                <% end %>
+              </div>
+              <div class="booking-description">
+                <h3> Where?: <strong> <%= booking.location %> </strong> |
+                    When?: <strong><%= booking.job_date %> </strong></h3>
+                <p><br> <em><%= booking.job_description %></em></p>
+              </div>
+              <div class="booking-details">
+                <div class="booking-status">
+                  <p>Status:</p>
+                  <% if booking.status == "accepted" %>
+                    <div class="accepted">
+                      <p><%= booking.status.upcase %> <i class="fas fa-thumbs-up"></i></p>
+                    </div>
+                  <% elsif booking.status == "pending" %>
+                    <div class="pending">
+                      <p><%= booking.status.upcase %> </p>
+                    </div>
+                  <% elsif booking.status == "declined" %>
+                    <div class="declined">
+                      <p><%= booking.status.upcase %> <i class="fas fa-thumbs-down"></i></p>
+                    </div>
+                  <% end %>
+                </div>
+                <%= link_to 'See more details', booking, class: "details-button" %>
+                </div>
+            </div>
         </div>
-        </center>
-      </div>
       <% end %>
     </div>
   </div>

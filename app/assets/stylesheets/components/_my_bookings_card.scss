@@ -1,0 +1,68 @@
+.bookings-card {
+  height: 200px;
+  width: 700px;
+  background-color: white;
+  color: #484848;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+}
+.booked-musician-avatar {
+  position: absolute;
+
+}
+.booked-avatar {
+  box-shadow: 1px 1px 1px 1px rgba(36, 32, 56, 0.1);
+  border-radius: 50%;
+}
+.booking-description {
+flex-grow: 1;
+margin-left: 140px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+.booking-description h3 {
+  font-size: 16px;
+}
+
+.booking-details {
+  align-items: center;
+}
+.booking-status {
+  text-align: center;
+}
+.booking-status p {
+  font-weight: bold;
+}
+.accepted {
+  color: green;
+}
+.declined {
+  color: red;
+}
+.pending {
+  color: grey;
+}
+.details-button {
+  color: white;
+  background: #242038;
+  letter-spacing: 1px;
+  display: inline-block;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 16px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  font-family: Raleway;
+  border-style: none;
+  font-weight: bold;
+}
+.details-button:hover {
+  color: #242038;
+  background: white;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
