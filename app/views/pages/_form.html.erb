@@ -4,6 +4,6 @@
   <p>Instrument</p>
     <%= select_tag "instrument", options_from_collection_for_select(@instruments, "id", "name") %><br>
   <p>Where</p>
-    <%= text_field_tag :location, params[:location], class: "input" %><br>
+    <%= text_field_tag :location, params[:location], class: "input", id: "musician_location" %><br>
     <%= submit_tag ("Search"), class: "button" %>
 <% end %>
