@@ -11,6 +11,9 @@
               <%= cl_image_tag @user.photo, class: "avatar-bordered avatar-large" %>
             <% end %>
             <h3>Location: <%= @user.location %></h3>
+            <p> | <% @user.instruments.each do |instrument| %>
+                    <%= instrument.name %> |
+                  <% end %> </p>
             <h3>Day rate: £<%= @user.rate %></h3>
             <% if @user == current_user %>
               <%= button_to "Edit", edit_user_registration_path, method: "get", class: "button-user"%>
