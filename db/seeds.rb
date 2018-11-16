@@ -28,8 +28,8 @@ User.create!(
   is_musician: false,
   location: "Newham, London",
   rate: 0,
-  remote_photo_url: "https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus elit vel justo sodales fringilla. Fusce sodales sapien id erat ornare, vel mollis odio blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+  remote_photo_url: "https://d3iw72m71ie81c.cloudfront.net/female-73.jpg",
+  bio: "You read the Bible, Brett?...Well, there’s this passage I got memorized. Sort of fits this occasion. Ezekiel 25:17. ‘The path of the righteous man is beset on all sides by the inequities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother’s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee!’"
 )
 puts "...WE COOL!"
 
@@ -42,8 +42,8 @@ User.create!(
   is_musician: false,
   location: "Enfield, London",
   rate: 0,
-  remote_photo_url: "https://images.pexels.com/photos/733416/pexels-photo-733416.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus elit vel justo sodales fringilla. Fusce sodales sapien id erat ornare, vel mollis odio blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+  remote_photo_url: "https://d3iw72m71ie81c.cloudfront.net/male-25.jpg",
+  bio: "You read the Bible, Brett?...Well, there’s this passage I got memorized. Sort of fits this occasion. Ezekiel 25:17. ‘The path of the righteous man is beset on all sides by the inequities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother’s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee!’"
 )
 puts "...WE COOL!"
 
@@ -57,7 +57,7 @@ User.create!(
   location: "Greenwich, London",
   rate: 60,
   remote_photo_url: "https://d3iw72m71ie81c.cloudfront.net/female-88.jpg",
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus elit vel justo sodales fringilla. Fusce sodales sapien id erat ornare, vel mollis odio blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+  bio: "You read the Bible, Brett?...Well, there’s this passage I got memorized. Sort of fits this occasion. Ezekiel 25:17. ‘The path of the righteous man is beset on all sides by the inequities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother’s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee!’"
 )
 puts "...WE COOL!"
 
@@ -65,13 +65,13 @@ puts "Making a new user..."
 User.create!(
   email: "artist2@demo.com",
   password: "password",
-  first_name: "Mike",
-  last_name: "Raffone",
+  first_name: "Alan",
+  last_name: "Bowl",
   is_musician: true,
   location: "Hackney, London",
   rate: 70,
   remote_photo_url: "https://pbs.twimg.com/profile_images/1039511502137450498/_tyYHblm.jpg",
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus elit vel justo sodales fringilla. Fusce sodales sapien id erat ornare, vel mollis odio blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+  bio: "You read the Bible, Brett?...Well, there’s this passage I got memorized. Sort of fits this occasion. Ezekiel 25:17. ‘The path of the righteous man is beset on all sides by the inequities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother’s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee!’"
 )
 puts "...WE COOL!"
 
@@ -85,7 +85,7 @@ User.create!(
   location: "Hammersmith, London",
   rate: 80,
   remote_photo_url: "https://d3iw72m71ie81c.cloudfront.net/female-38.jpg",
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus elit vel justo sodales fringilla. Fusce sodales sapien id erat ornare, vel mollis odio blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+  bio: "You read the Bible, Brett?...Well, there’s this passage I got memorized. Sort of fits this occasion. Ezekiel 25:17. ‘The path of the righteous man is beset on all sides by the inequities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother’s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee!’"
 )
 puts "...WE COOL!"
 
@@ -94,12 +94,12 @@ User.create!(
   email: "artist4@demo.com",
   password: "password",
   first_name: "Crystal",
-  last_name: "Glass",
+  last_name: "Ball",
   is_musician: true,
   location: "Islington, London",
   rate: 90,
   remote_photo_url: "https://d3iw72m71ie81c.cloudfront.net/female-91.jpg",
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus elit vel justo sodales fringilla. Fusce sodales sapien id erat ornare, vel mollis odio blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+  bio: "You read the Bible, Brett?...Well, there’s this passage I got memorized. Sort of fits this occasion. Ezekiel 25:17. ‘The path of the righteous man is beset on all sides by the inequities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother’s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee!’"
 )
 puts "...WE COOL!"
 
@@ -113,7 +113,7 @@ User.create!(
   location: "Lambeth, London",
   rate: 65,
   remote_photo_url: "https://pbs.twimg.com/profile_images/978817433191448576/tRhgibwY.jpg",
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus elit vel justo sodales fringilla. Fusce sodales sapien id erat ornare, vel mollis odio blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+  bio: "He’s so smart, Jenny. You’d be so proud of him. I am. He, uh, wrote a letter, and he says I can’t read it. I’m not supposed to, so I’ll just leave it here for you. Jenny, I don’t know if Momma was right or if, if it’s Lieutenant Dan. I don’t know if we each have a destiny, or if we’re all just floatin’ around accidental-like on a breeze. But I, I think maybe it’s both. Maybe both is happenin’ at the same time. I miss you, Jenny. If there’s anything you need, I won’t be far away."
 )
 puts "...WE COOL!"
 
@@ -127,7 +127,7 @@ User.create!(
   location: "Southwark, London",
   rate: 75,
   remote_photo_url: "https://pbs.twimg.com/profile_images/973617292985511936/4SQLIhV_.jpg",
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus elit vel justo sodales fringilla. Fusce sodales sapien id erat ornare, vel mollis odio blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+  bio: "He’s so smart, Jenny. You’d be so proud of him. I am. He, uh, wrote a letter, and he says I can’t read it. I’m not supposed to, so I’ll just leave it here for you. Jenny, I don’t know if Momma was right or if, if it’s Lieutenant Dan. I don’t know if we each have a destiny, or if we’re all just floatin’ around accidental-like on a breeze. But I, I think maybe it’s both. Maybe both is happenin’ at the same time. I miss you, Jenny. If there’s anything you need, I won’t be far away."
 )
 puts "...WE COOL!"
 
@@ -135,13 +135,13 @@ puts "Making a new user..."
 User.create!(
   email: "artist7@demo.com",
   password: "password",
-  first_name: "Tad",
-  last_name: "Moore",
+  first_name: "Jose",
+  last_name: "Noway",
   is_musician: true,
   location: "Tower Hamlets, London",
   rate: 85,
   remote_photo_url: "https://pbs.twimg.com/profile_images/950813895291297794/IAUhzxPw.jpg",
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus elit vel justo sodales fringilla. Fusce sodales sapien id erat ornare, vel mollis odio blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+  bio: "He’s so smart, Jenny. You’d be so proud of him. I am. He, uh, wrote a letter, and he says I can’t read it. I’m not supposed to, so I’ll just leave it here for you. Jenny, I don’t know if Momma was right or if, if it’s Lieutenant Dan. I don’t know if we each have a destiny, or if we’re all just floatin’ around accidental-like on a breeze. But I, I think maybe it’s both. Maybe both is happenin’ at the same time. I miss you, Jenny. If there’s anything you need, I won’t be far away."
 )
 puts "...WE COOL!"
 
@@ -155,7 +155,7 @@ User.create!(
   location: "Barking, London",
   rate: 95,
   remote_photo_url: "https://tinyfac.es/data/avatars/BA0CB1F2-8C79-4376-B13B-DD5FB8772537-200w.jpeg",
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus elit vel justo sodales fringilla. Fusce sodales sapien id erat ornare, vel mollis odio blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+  bio: "He’s so smart, Jenny. You’d be so proud of him. I am. He, uh, wrote a letter, and he says I can’t read it. I’m not supposed to, so I’ll just leave it here for you. Jenny, I don’t know if Momma was right or if, if it’s Lieutenant Dan. I don’t know if we each have a destiny, or if we’re all just floatin’ around accidental-like on a breeze. But I, I think maybe it’s both. Maybe both is happenin’ at the same time. I miss you, Jenny. If there’s anything you need, I won’t be far away."
 )
 puts "...WE COOL!"
 
@@ -169,7 +169,7 @@ User.create!(
   location: "Brent, London",
   rate: 50,
   remote_photo_url: "https://pbs.twimg.com/profile_images/869411450355294208/kKg7ZLmU.jpg",
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus elit vel justo sodales fringilla. Fusce sodales sapien id erat ornare, vel mollis odio blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+  bio: "He’s so smart, Jenny. You’d be so proud of him. I am. He, uh, wrote a letter, and he says I can’t read it. I’m not supposed to, so I’ll just leave it here for you. Jenny, I don’t know if Momma was right or if, if it’s Lieutenant Dan. I don’t know if we each have a destiny, or if we’re all just floatin’ around accidental-like on a breeze. But I, I think maybe it’s both. Maybe both is happenin’ at the same time. I miss you, Jenny. If there’s anything you need, I won’t be far away."
 )
 puts "...WE COOL!"
 
@@ -183,7 +183,7 @@ User.create!(
   location: "Camden, London",
   rate: 55,
   remote_photo_url: "https://d3iw72m71ie81c.cloudfront.net/female-53.jpg",
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus elit vel justo sodales fringilla. Fusce sodales sapien id erat ornare, vel mollis odio blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+  bio: "He’s so smart, Jenny. You’d be so proud of him. I am. He, uh, wrote a letter, and he says I can’t read it. I’m not supposed to, so I’ll just leave it here for you. Jenny, I don’t know if Momma was right or if, if it’s Lieutenant Dan. I don’t know if we each have a destiny, or if we’re all just floatin’ around accidental-like on a breeze. But I, I think maybe it’s both. Maybe both is happenin’ at the same time. I miss you, Jenny. If there’s anything you need, I won’t be far away."
 )
 puts "DONE!"
 
