@@ -31,3 +31,12 @@ if (mapElement) { // only build a map if there's a div#map to inject into
     map.fitBounds(bounds, { duration: 3000, padding: 75 })
   }
 }
+
+const addressInput = document.getElementById('musician_location');
+
+if (addressInput) {
+  const places = require('places.js');
+  const placesAutocomplete = places({
+    container: addressInput
+  });
+}
